@@ -1,28 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <title>carousel</title>
+    <style>
+        * {
+            box-shadow: inset 0 0 4px purple;
+        }
+
+        #carousel {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "controls"
+                "content";
+        }
+
+        .controls {
+            grid-area: controls;
+            background-color: peru;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: pink;
+        }
+
+        .aspect-w-1 {
+            --tw-aspect-w: 1;
+            position: relative;
+            padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+        }
+
+        .aspect-w-1>* {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .aspect-h-1 {
+            --tw-aspect-h: 1;
+        }
+
+        @media (min-width: 640px) {
+
+            #carousel {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    "content controls";
+            }
+
+            .controls {
+                grid-area: controls;
+                background-color: red;
+            }
+
+            .content {
+                grid-area: content;
+                background-color: blue;
+            }
+        }
+
+        @media (min-width: 1280px) {
+
+            #carousel {
+                display: grid;
+                grid-template-columns: calc(5/12 * 100%) calc(7/12 * 100%);
+                grid-template-rows: 1fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    "content controls";
+            }
+
+            .controls {
+                grid-area: controls;
+                background-color: yellow;
+            }
+
+            .content {
+                grid-area: content;
+                background-color: green;
+            }
+
+        }
+    </style>
 </head>
+
 <body>
     <section id="carousel">
-        <section>
-            <button><</button>
-            <img class="carousel-image" src="https://api.lorem.space/image/fashion?w=400&h=400" alt="">
-            <button>></button>
+
+        <section class="controls aspect-w-1 aspect-h-1">
+            <div>
+
+                <button>&lt;</button>
+                <img width="80%" height="auto" class="carousel-image"
+                    src="https://api.lorem.space/image/fashion?w=400&h=400" alt="">
+                <button>&gt;</button>
+
+            </div>
         </section>
 
-        <header>
-            <h1 class="carousel-title">Aged</h1>
-            <p class="carousel-description">A toast tot he perfect aged cocktail.</p>
-        </header>
+        <section class="content aspect-w-1 aspect-h-1">
 
-        <button>Learn how it works</button>
+            <div>
+                <header>
+                    <h1 class="carousel-title">Aged</h1>
+                    <p class="carousel-description">A toast to the perfect aged cocktail.</p>
+                </header>
 
-        <a href="#">or View available boxes</a>
+                <button>Learn how it works</button>
+
+                <a href="#">or View available boxes</a>
+            </div>
+        </section>
+
     </section>
 </body>
+
 </html>
