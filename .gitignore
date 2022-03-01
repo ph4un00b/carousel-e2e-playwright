@@ -4,4 +4,3 @@ playwright-report/
 test-results/
 playwright-report/
 _site/
-package-lock.json
