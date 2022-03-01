@@ -10,7 +10,7 @@
     "fmt": "deno fmt main.js",
     "debug": "playwright test --project=chromium --debug",
     "gen": "playwright codegen --device='iPhone 11' http://localhost:3000/",
-    "test": "playwright test --project=chromium --reporter=list",
+    "test": "playwright test --project=webkit --reporter=list",
     "tests": "playwright test"
   },
   "keywords": [],
