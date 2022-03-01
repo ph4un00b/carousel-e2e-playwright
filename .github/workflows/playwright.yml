@@ -13,10 +13,19 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14.x'
+    - uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x       
+    - name: Install Lume
+      run: deno run -A https://deno.land/x/lume/install.ts
+    - name: Build HTML
+      run: lume --config _config.js
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright
       run: npx playwright install --with-deps
+    - name: Start server
+      run: lume --serve &
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v2
