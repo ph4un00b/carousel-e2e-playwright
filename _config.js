@@ -1,7 +1,7 @@
 import lume from "https:/deno.land/x/lume@v1.5.1/mod.ts";
 
 const nunjucks = {
-  extensions: [".html"],
+  // extensions: [".html"],
   includes: "views",
   options: {
     throwOnUndefined: true,

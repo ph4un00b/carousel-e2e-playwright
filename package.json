@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "server": "lume --serve",
-    "reload": "windicss --dev --output styles.css index.html",
+    "reload": "windicss --dev --output styles.css index.njk",
     "dev": "concurrently \"npm run server\" \"npm run reload\"",
-    "styles": "windicss --output styles.css index.html",
+    "styles": "windicss --output styles.css index.njk",
     "fmt": "deno fmt main.js",
     "debug": "playwright test --project=chromium --debug",
     "gen": "playwright codegen --device='iPhone 11' http://localhost:3000/",
