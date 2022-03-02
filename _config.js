@@ -1,7 +1,7 @@
-import lume from "https:/deno.land/x/lume@v1.5.1/mod.ts";
+import lume from "lume/mod.ts";
 
 const nunjucks = {
-  // extensions: [".html"],
+  extensions: [".html"],
   includes: "views",
   options: {
     throwOnUndefined: true,
@@ -10,7 +10,6 @@ const nunjucks = {
 
 const site = lume({}, { nunjucks });
 
-site.copy("index.html");
 site.copy("main.js");
 site.copy("styles.css");
 
