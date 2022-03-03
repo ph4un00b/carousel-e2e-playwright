@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: windows-latests
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -25,9 +25,10 @@ jobs:
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Start Background Web Server
-      run: lume --serve &
+      # run: lume --serve &
+      run: Start-Process -NoNewWindow lume --serve
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --project=chromium --reporter=list
     - uses: actions/upload-artifact@v2
       if: always()
       with:

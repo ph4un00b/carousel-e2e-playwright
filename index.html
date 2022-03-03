@@ -8,15 +8,16 @@
     <title>carousel</title>
     <style>
         * {
-            box-shadow: inset 0 0 4px purple;
-            margin: 0; padding: 0;
+            /* box-shadow: inset 0 0 4px purple; */
+            margin: 0;
+            padding: 0;
         }
 
         #carousel {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 60%;
-            gap: 0px 0px;
+            grid-template-rows: 1fr auto;
+            /* gap: 1em 1em; */
             grid-auto-flow: row;
             grid-template-areas:
                 "controls"
@@ -25,12 +26,12 @@
 
         .controls {
             grid-area: controls;
-            background-color: peru;
+            /* background-color: peru; */
         }
 
         .content {
             grid-area: content;
-            background-color: pink;
+            /* background-color: pink; */
         }
 
         .aspect-w-1 {
@@ -54,6 +55,11 @@
         }
 
         @media (min-width: 640px) {
+            * {
+                /* box-shadow: inset 0 0 4px purple; */
+                margin: 0;
+                padding: 0;
+            }
 
             #carousel {
                 display: grid;
@@ -67,12 +73,12 @@
 
             .controls {
                 grid-area: controls;
-                background-color: red;
+                /* background-color: red; */
             }
 
             .content {
                 grid-area: content;
-                background-color: blue;
+                /* background-color: blue; */
             }
         }
 
