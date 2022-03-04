@@ -19,8 +19,4 @@ test.describe("Mobile Carousel", () => {
     await expect(page.locator("text=Featured Boxes")).toBeHidden();
   });
 
-  test("look and feel.", async ({ page }) => {
-    await page.goto("http://localhost:3000/");
-    expect(await page.screenshot()).toMatchSnapshot("mobile-carousel.png");
-  });
 });

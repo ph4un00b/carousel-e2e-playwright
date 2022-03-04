@@ -26,9 +26,8 @@ jobs:
       run: npx playwright install --with-deps
     - name: Start Background Web Server
       run: lume --serve &
-      # run: Start-Job lume --serve
     - name: Run Playwright tests
-      run: npx playwright test --project=chromium --reporter=list
+      run: npm run tests
     - uses: actions/upload-artifact@v2
       if: always()
       with:
