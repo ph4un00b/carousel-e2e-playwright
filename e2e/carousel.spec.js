@@ -2,11 +2,10 @@
 const { test, expect, devices } = require("@playwright/test");
 
 test.use({
-  ...devices['iPhone 11'],
+  ...devices["iPhone 11"],
 });
 
 test.describe("Mobile Carousel", () => {
-
   test("markup should be visible.", async ({ page }) => {
     await page.goto("http://localhost:3000/");
     await expect(page.locator("#carousel")).toBeVisible();
@@ -20,9 +19,8 @@ test.describe("Mobile Carousel", () => {
     await expect(page.locator("text=Featured Boxes")).toBeHidden();
   });
 
-  test('example test', async ({ page }) => {
+  test("look and feel.", async ({ page }) => {
     await page.goto("http://localhost:3000/");
-    expect(await page.screenshot()).toMatchSnapshot('mobile-carousel.png');
+    expect(await page.screenshot()).toMatchSnapshot("mobile-carousel.png");
   });
 });
-

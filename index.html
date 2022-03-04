@@ -26,7 +26,24 @@
 
         .controls {
             grid-area: controls;
+            margin-top: 1em;
+            margin-left: 1em;
+            margin-right: 1em;
             /* background-color: peru; */
+        }
+
+        .left {
+            font-size: 2.4em;
+            left: -0.11em;
+            width: 1.8em;
+            height: 1.8em;
+        }
+
+        .right {
+            font-size: 2.4em;
+            right: -0.11em;
+            width: 1.8em;
+            height: 1.8em;
         }
 
         .content {
@@ -62,10 +79,12 @@
             }
 
             #carousel {
+                padding: 0em 1em;
+
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr;
-                gap: 0px 0px;
+                gap: 0px 1em;
                 grid-auto-flow: row;
                 grid-template-areas:
                     "content controls";
@@ -73,7 +92,24 @@
 
             .controls {
                 grid-area: controls;
+                margin-top: 0em;
+                margin-left: 0em;
+                margin-right: 0em;
                 /* background-color: red; */
+            }
+
+            .left {
+                font-size: 1.5em;
+                left: -0.29em;
+                width: 2.1em;
+                height: 2.1em;
+            }
+
+            .right {
+                font-size: 1.5em;
+                right: -0.29em;
+                width: 2.1em;
+                height: 2.1em;
             }
 
             .content {

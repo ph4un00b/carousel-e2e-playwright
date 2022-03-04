@@ -1,9 +1,9 @@
 // @no-check
 const { test, expect, devices } = require("@playwright/test");
 
-    test.use({
-      ...devices['iPad Mini landscape'],
-    });
+test.use({
+  ...devices["iPad Mini landscape"],
+});
 
 test.describe("Tablet Carousel", () => {
   test("markup should be visible.", async ({ page }) => {
@@ -18,5 +18,9 @@ test.describe("Tablet Carousel", () => {
     await expect(page.locator("text=Learn how it works")).toBeVisible();
     await expect(page.locator("text=or View available boxes")).toBeVisible();
   });
-});
 
+  test("look and feel.", async ({ page }) => {
+    await page.goto("http://localhost:3000/");
+    expect(await page.screenshot()).toMatchSnapshot("tablet-carousel.png");
+  });
+});
