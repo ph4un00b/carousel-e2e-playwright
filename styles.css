@@ -7,12 +7,13 @@
   --tw-bg-opacity: 1;
   background-color: rgba(60, 88, 108, var(--tw-bg-opacity));
 }
-.bg-transparent {
-  background-color: transparent;
-}
 .bg-purple-400 {
   --tw-bg-opacity: 1;
   background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
+}
+.bg-rose-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 205, 211, var(--tw-bg-opacity));
 }
 .bg-\[\#58a4e0\] {
   --tw-bg-opacity: 1;
@@ -80,9 +81,6 @@
 }
 .pb-\[1em\] {
   padding-bottom: 1em;
-}
-.absolute {
-  position: absolute;
 }
 .relative {
   position: relative;
@@ -187,6 +185,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .lg\:bg-orange-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 146, 60, var(--tw-bg-opacity));
+  }
   .lg\:bg-orange-500 {
     --tw-bg-opacity: 1;
     background-color: rgba(249, 115, 22, var(--tw-bg-opacity));

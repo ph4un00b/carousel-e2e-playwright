@@ -1,38 +1,42 @@
-<section id="carousel" class="bg-[#3c586c]">
+<section aria-label="products on demand" id="carousel" class="bg-[#3c586c]">
 
-    <section class="controls aspect-w-1 aspect-h-1 bg-transparent">
+    <section aria-label="products list" class="controls">
 
-        <div class="flex flex-row items-center justify-between">
+        <div class="carousel-image flex flex-row items-center justify-between bg-purple-400 sm:bg-rose-400 lg:bg-orange-400">
 
-            <button
+            <button aria-controls="current-product" aria-label="back"
                 class="left z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer">&lt;</button>
 
+            <div class="relative aspect-w-1 aspect-h-1 bg-rose-200">
 
-            <div class="absolute w-full h-full">
-                <div class="carousel-image relative h-full bg-purple-400 sm:bg-rose-400 lg:bg-orange-500">
-                </div>
+                <!-- <div class="carousel-image relative h-full w-full bg-purple-400 sm:bg-rose-400 lg:bg-orange-500"></div> -->
                 <!-- <img width="100%" height="auto" class="carousel-image" src="https://api.lorem.space/image/fashion?w=400&h=400" alt=""> -->
+
             </div>
 
-            <button
+            <button aria-controls="current-product" aria-label="next"
                 class="right z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer">&gt;</button>
+
         </div>
 
     </section>
 
 
-    <section class="content text-white sm:flex sm:flex-col sm:justify-center">
+    <section id="current-product" aria-label="product description"
+        class="content text-white sm:flex sm:flex-col sm:justify-center">
 
-        <div
+        <section aria-labelledby="product-name"
             class="grid grid-cols-3 space-y-[1.2em] mb-[1em] mx-[1em] sm:space-y-[0.6em] sm:mb-[0em] sm:mx-[0em] sm:grid-col-4 sm:bg-transparent-400 sm:h-[65%] lg:h-[50%] lg:grid-cols-5">
 
             <p class="text-center hidden sm:block sm:col-span-4 lg:font-bold lg:text-sm">
                 Featured Boxes
             </p>
 
-            <h1 class="col-span-3 text-center carousel-title text-2xl sm:col-span-4 lg:text-3xl">Aged</h1>
+            <h1 id="product-name" class="col-span-3 text-center carousel-title text-2xl sm:col-span-4 lg:text-3xl">Aged
+            </h1>
 
-            <p class="col-span-3 text-center tracking-wide break-words sm:pb-[0.5em] sm:col-span-4 lg:text-xl carousel-description">
+            <p
+                class="col-span-3 text-center tracking-wide break-words sm:pb-[0.5em] sm:col-span-4 lg:text-xl carousel-description">
                 A toast to the perfectly aged cocktail.
             </p>
 
@@ -46,7 +50,7 @@
                 or View available boxes
             </a>
 
-        </div>
+        </section>
 
     </section>
 
