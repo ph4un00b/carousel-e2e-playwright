@@ -12,5 +12,6 @@ const site = lume({}, { nunjucks });
 
 site.copy("main.js");
 site.copy("styles.css");
+site.copy("controllers");
 
 export default site;
