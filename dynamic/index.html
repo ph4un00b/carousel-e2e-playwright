@@ -17,7 +17,7 @@
             padding: 0;
         }
 
-        .carousel-item {
+        #carousel {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr auto;
@@ -82,7 +82,7 @@
                 padding: 0;
             }
 
-            .carousel-item {
+            #carousel {
                 padding: 0em 1em;
 
                 display: grid;
@@ -129,7 +129,7 @@
                 padding: 0;
             }
 
-            .carousel-item {
+            #carousel {
                 padding: 0em 8em;
 
                 display: grid;
@@ -169,12 +169,12 @@
         }
     </style>
     <link rel="stylesheet" href="../styles.css">
-    <script type="module" src="./controllers/static.js"></script>
+    <script type="module" src="./controllers/dynamic.js"></script>
 </head>
 
 <body>
     <main>
-        {% include "static_carousel.html" %}
+        {% include "dynamic_carousel.html" %}
     </main>
 </body>
 
