@@ -2,21 +2,21 @@
     {
         "name": "Alchemy",
         "description": "Stock your home bar with pro-level cocktail wares.",
-        "image": "https://api.lorem.space/image/fashion?w=400&h=400"
+        "image": "../images/human.jpg"
     },
     {
         "name": "Aged",
         "description": "A toast to the perfectly aged cocktail.",
-        "image": "https://api.lorem.space/image/movie?w=400&h=400"
+        "image": "../images/human.jpg"
     },
     {
         "name": "Refresh",
         "description": "Bring some class to your morning routine.",
-        "image": "https://api.lorem.space/image/game?w=400&h=400"
+        "image": "../images/human.jpg"
     },
     {
         "name": "Weekender",
         "description": "Don't just get away from the crowds — stand out from them.",
-        "image": "https://api.lorem.space/image/album?w=400&h=400"
+        "image": "../images/human.jpg"
     }
 ]

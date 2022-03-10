@@ -1,8 +1,8 @@
 {% set products = [
-    { name: "Alchemy", description: "Stock your home bar with pro-level cocktail wares.", image: "https://api.lorem.space/image/fashion?w=400&h=400" },
-    { name: "Aged", description: "A toast to the perfectly aged cocktail.", image: "https://api.lorem.space/image/movie?w=400&h=400" },
-    { name: "Refresh", description: "Bring some class to your morning routine.", image: "https://api.lorem.space/image/game?w=400&h=400" },
-    { name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "https://api.lorem.space/image/album?w=400&h=400" }
+    { name: "Alchemy", description: "Stock your home bar with pro-level cocktail wares.", image: "../images/human.jpg" },
+    { name: "Aged", description: "A toast to the perfectly aged cocktail.", image: "../images/human.jpg" },
+    { name: "Refresh", description: "Bring some class to your morning routine.", image: "../images/human.jpg" },
+    { name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../images/human.jpg" }
 ] %}
 
 <section v-cloak v-scope="CarouselController()" @vue:mounted="total_items = $el.children.length" aria-label="products on demand" id="carousel" class="bg-[#3c586c]">
@@ -12,7 +12,7 @@
 <div v-show="display_item === {{ loop.index0 }}" class="carousel-item">
     <section aria-label="product: {{ product.name }}" class="controls">
 
-        <div class="carousel-image flex flex-row items-center justify-between bg-purple-400 sm:bg-rose-400 lg:bg-orange-400">
+        <div style="background-image: url('{{ product.image }}');" class="carousel-image bg-cover flex flex-row items-center justify-between bg-purple-400 sm:bg-rose-400 lg:bg-orange-400">
 
             <button id="back-{{ loop.index0 }}" @click="current_item -= 1" aria-controls="current-product" aria-label="back"
                 class="left z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer">&lt;</button>
@@ -20,8 +20,7 @@
                 <div class="relative aspect-w-1 aspect-h-1 bg-rose-200">
 
                 </div>
-                <!-- <div class="carousel-image relative h-full w-full bg-purple-400 sm:bg-rose-400 lg:bg-orange-500"></div> -->
-                <!-- <img width="100%" height="auto" class="carousel-image" src="https://api.lorem.space/image/fashion?w=400&h=400" alt=""> -->
+
             <button id="next-{{ loop.index0 }}" @click="current_item += 1" aria-controls="current-product" aria-label="next"
                 class="right z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer">&gt;</button>
 

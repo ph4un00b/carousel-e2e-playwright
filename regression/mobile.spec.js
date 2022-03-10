@@ -18,7 +18,7 @@ test.describe("Mobile Carousel", () => {
 
   test("dynamic look and feel.", async ({ page }) => {
     await page.goto("http://localhost:3000/dynamic/", {
-      waitUntil: "networkidle",
+      waitUntil: "networkidle"
     });
 
     expect(await page.screenshot()).toMatchSnapshot(
