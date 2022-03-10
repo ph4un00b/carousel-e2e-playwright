@@ -6,8 +6,23 @@ test.use({
 });
 
 test.describe("Desktop Carousel", () => {
-  test("look and feel.", async ({ page }) => {
-    await page.goto("http://localhost:3000/");
-    expect(await page.screenshot()).toMatchSnapshot("desktop-carousel.png");
+  test("static look and feel.", async ({ page }) => {
+    await page.goto("http://localhost:3000/static/", {
+      waitUntil: "networkidle",
+    });
+
+    expect(await page.screenshot()).toMatchSnapshot(
+      "desktop-carousel.png",
+    );
+  });
+
+  test("dynamic look and feel.", async ({ page }) => {
+    await page.goto("http://localhost:3000/dynamic/", {
+      waitUntil: "networkidle",
+    });
+
+    expect(await page.screenshot()).toMatchSnapshot(
+      "desktop-carousel.png",
+    );
   });
 });

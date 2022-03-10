@@ -9,6 +9,7 @@
     "styles": "windicss --output styles.css index.html views/**",
     "fmt": "deno fmt main.js",
     "debug": "playwright test --project=webkit --debug",
+    "vdebug": "playwright test --project=webkit --debug --config=regression.config.js",
     "gen": "playwright codegen --device=\"iPhone 11\" http://localhost:3000/static/",
     "test": "playwright test --project=webkit --reporter=list",
     "tests": "playwright test --reporter=list --workers 1",
