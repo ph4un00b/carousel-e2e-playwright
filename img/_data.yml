@@ -1,7 +1,7 @@
 imagick:
   - resize: [250, 250]
     format: webp
-  - resize: [256, 256]
+  - resize: [200, 200]
     suffix: -blur
-    blur: [50,50]
-    format: webp
+    blur: [90,90]
+    format: jpg
