@@ -24,8 +24,6 @@ jobs:
       run: npm ci
     - name: Install Playwright
       run: npx playwright install --with-deps
-    - name: Start Background Web Server
-      run: lume --serve &
     - name: Run Playwright tests
       run: npm run tests
     - uses: actions/upload-artifact@v2

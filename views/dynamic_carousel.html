@@ -2,8 +2,7 @@
 
     <section :aria-label="'product: ' + current_product.name" class="controls">
 
-        <div :style="{ 'background-image': 'url(' + current_product.image + ')' }"
-            class="carousel-image">
+        <div :style="{ 'background-image': 'url(' + current_product.image + ')' }" class="carousel-image">
 
             <button id="back" @click="current_item -= 1" aria-controls="current-product" aria-label="back"
                 class="left">&lt;</button>
@@ -20,11 +19,9 @@
     </section>
 
 
-    <section id="current-product" aria-label="product description"
-        class="content">
+    <section id="current-product" aria-label="product description" class="content">
 
-        <section aria-labelledby="product-name"
-            class="grid-content">
+        <section aria-labelledby="product-name" class="grid-content">
 
             <p class="secondary-title">
                 Featured Boxes
@@ -34,8 +31,7 @@
                 ${ current_product.name }
             </h1>
 
-            <p
-                class="item-description">
+            <p class="item-description">
                 ${ current_product.description }
             </p>
 
@@ -44,8 +40,7 @@
             </button>
 
 
-            <a href="#"
-                class="alternative-link">
+            <a href="#" class="alternative-link">
                 or View available boxes
             </a>
 

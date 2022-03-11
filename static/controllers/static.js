@@ -4,12 +4,8 @@ function CarouselController() {
   return {
     total_items: 0,
     current_item: 0,
-    get display_item() {
-      if (this.current_item > 0) {
-        return this.current_item % this.total_items;
-      } else {
-        return (this.current_item % this.total_items) * -1;
-      }
+    get current_index() {
+      return Math.abs(this.current_item % this.total_items);
     },
   };
 }

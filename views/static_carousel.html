@@ -5,64 +5,61 @@
     { name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../images/human.jpg" }
 ] %}
 
-<section v-cloak v-scope="CarouselController()" @vue:mounted="total_items = $el.children.length" aria-label="products on demand" id="carousel" class="bg-carousel">
+<section v-cloak v-scope="CarouselController()" @vue:mounted="total_items = $el.children.length"
+    aria-label="products on demand" id="carousel" class="bg-carousel">
 
-{% for product in products %}
+    {% for product in products %}
 
-<div v-show="display_item === {{ loop.index0 }}" class="carousel-item">
-    <section aria-label="product: {{ product.name }}" class="controls">
+    <div v-show="current_index === {{ loop.index0 }}" class="carousel-item">
+        <section aria-label="product: {{ product.name }}" class="controls">
 
-        <div style="background-image: url('{{ product.image }}');" class="carousel-image">
+            <div style="background-image: url('{{ product.image }}');" class="carousel-image">
 
-            <button id="back-{{ loop.index0 }}" @click="current_item -= 1" aria-controls="current-product" aria-label="back"
-                class="left">&lt;</button>
+                <button id="back-{{ loop.index0 }}" @click="current_item -= 1" aria-controls="current-product"
+                    aria-label="back" class="left">&lt;</button>
 
                 <div class="square aspect-w-1 aspect-h-1">
 
                 </div>
 
-            <button id="next-{{ loop.index0 }}" @click="current_item += 1" aria-controls="current-product" aria-label="next"
-                class="right">&gt;</button>
+                <button id="next-{{ loop.index0 }}" @click="current_item += 1" aria-controls="current-product"
+                    aria-label="next" class="right">&gt;</button>
 
-        </div>
-
-    </section>
-
-
-    <section id="current-product" aria-label="product description"
-        class="content">
-
-        <section aria-labelledby="product-name"
-            class="grid-content">
-
-            <p class="secondary-title">
-                Featured Boxes
-            </p>
-
-            <h1 id="product-name" class="item-name">
-                 {{ product.name }}
-            </h1>
-
-            <p
-                class="item-description">
-                {{ product.description }}
-            </p>
-
-            <button class="call-to-action">
-                Learn how it works
-            </button>
-
-
-            <a href="#"
-                class="alternative-link">
-                or View available boxes
-            </a>
+            </div>
 
         </section>
 
-    </section>
-</div>
 
-{% endfor %}
+        <section id="current-product" aria-label="product description" class="content">
+
+            <section aria-labelledby="product-name" class="grid-content">
+
+                <p class="secondary-title">
+                    Featured Boxes
+                </p>
+
+                <h1 id="product-name" class="item-name">
+                    {{ product.name }}
+                </h1>
+
+                <p class="item-description">
+                    {{ product.description }}
+                </p>
+
+                <button class="call-to-action">
+                    Learn how it works
+                </button>
+
+
+                <a href="#" class="alternative-link">
+                    or View available boxes
+                </a>
+
+            </section>
+
+        </section>
+    </div>
+
+    {% endfor %}
 
 </section>
