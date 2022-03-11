@@ -5,7 +5,7 @@ export default defineConfig({
     throttlingMethod: "simulate",
   },
   site: "http://localhost:3000",
-//   site: "https://carousel-opal.vercel.app",
+  // site: "https://carousel-opal.vercel.app",
   urls: ["/static/", "/dynamic/"],
   scanner: {
     // exclude specific routes

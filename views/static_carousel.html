@@ -10,7 +10,7 @@
 
     {% for product in products %}
 
-    <div v-if="current_index === {{ loop.index0 }}" class="carousel-item">
+    <div v-if="current_index === {{ loop.index0 }}" v-effect="$el.classList.remove('hidden')" class="carousel-item {{ '' if loop.index0 == 0 else 'hidden' }}">
         <section aria-label="product: {{ product.name }}" class="controls">
 
             <div style="background-image: url('{{ product.image }}');" class="carousel-image">
