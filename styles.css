@@ -23,6 +23,7 @@
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  z-index: -1;
 }
 @media (min-width: 640px) {
   .carousel-image {
@@ -43,7 +44,7 @@
   position: relative;
   --tw-text-opacity: 1;
   color: rgba(156, 163, 175, var(--tw-text-opacity));
-  z-index: 1;
+  z-index: 10;
 }
 .square {
   --tw-bg-opacity: 1;
@@ -57,7 +58,7 @@
   position: relative;
   --tw-text-opacity: 1;
   color: rgba(156, 163, 175, var(--tw-text-opacity));
-  z-index: 1;
+  z-index: 10;
 }
 .content {
   --tw-text-opacity: 1;

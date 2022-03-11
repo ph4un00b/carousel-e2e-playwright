@@ -19,7 +19,7 @@
   "keywords": [],
   "author": "ph4un00b",
   "devDependencies": {
-    "@playwright/test": "1.19.2",
+    "@playwright/test": "1.21.0-alpha-mar-11-2022",
     "concurrently": "7.0.0",
     "puppeteer": "13.5.1",
     "unlighthouse": "0.3.6",

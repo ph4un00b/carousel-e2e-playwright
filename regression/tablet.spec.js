@@ -11,7 +11,7 @@ test.describe("Tablet Carousel", () => {
       waitUntil: "networkidle",
     });
 
-    expect(await page.screenshot()).toMatchSnapshot(
+    expect(await page.screenshot({ omitBackground: true })).toMatchSnapshot(
       "tablet-carousel.png",
     );
   });
@@ -21,7 +21,7 @@ test.describe("Tablet Carousel", () => {
       waitUntil: "networkidle",
     });
 
-    expect(await page.screenshot()).toMatchSnapshot(
+    expect(await page.screenshot({ omitBackground: true })).toMatchSnapshot(
       "tablet-carousel.png",
     );
   });

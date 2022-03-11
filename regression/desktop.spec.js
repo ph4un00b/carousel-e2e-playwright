@@ -11,7 +11,8 @@ test.describe("Desktop Carousel", () => {
       waitUntil: "networkidle",
     });
 
-    expect(await page.screenshot()).toMatchSnapshot(
+    // expect(await page.screenshot({ mask: [page.locator(".carousel-image")]})).toMatchSnapshot(
+    expect(await page.screenshot({ omitBackground: true })).toMatchSnapshot(
       "desktop-carousel.png",
     );
   });
@@ -21,7 +22,7 @@ test.describe("Desktop Carousel", () => {
       waitUntil: "networkidle",
     });
 
-    expect(await page.screenshot()).toMatchSnapshot(
+    expect(await page.screenshot({ omitBackground: true })).toMatchSnapshot(
       "desktop-carousel.png",
     );
   });

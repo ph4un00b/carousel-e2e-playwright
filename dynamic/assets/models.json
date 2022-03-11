@@ -2,21 +2,21 @@
     {
         "name": "Alchemy",
         "description": "Stock your home bar with pro-level cocktail wares.",
-        "image": "../images/human.jpg"
+        "image": "../img/human.webp"
     },
     {
         "name": "Aged",
         "description": "A toast to the perfectly aged cocktail.",
-        "image": "../images/human.jpg"
+        "image": "../img/human.webp"
     },
     {
         "name": "Refresh",
         "description": "Bring some class to your morning routine.",
-        "image": "../images/human.jpg"
+        "image": "../img/human.webp"
     },
     {
         "name": "Weekender",
         "description": "Don't just get away from the crowds — stand out from them.",
-        "image": "../images/human.jpg"
+        "image": "../img/human.webp"
     }
 ]

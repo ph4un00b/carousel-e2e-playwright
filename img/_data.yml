@@ -1,0 +1,7 @@
+imagick:
+  - resize: [250, 250]
+    format: webp
+  - resize: [256, 256]
+    suffix: -blur
+    blur: [50,50]
+    format: webp
