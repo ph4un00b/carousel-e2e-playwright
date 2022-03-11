@@ -1,8 +1,8 @@
-<section v-cloak v-scope="CarouselController()" aria-label="products on demand" id="carousel" class="bg-carousel">
+<section v-scope="CarouselController()" aria-label="products on demand" id="carousel" class="bg-carousel">
 
     <section :aria-label="'product: ' + current_product.name" class="controls">
 
-        <div :style="{ 'background-image': 'url(' + current_product.image + ')' }" class="carousel-image">
+        <div v-cloak :style="{ 'background-image': 'url(' + current_product.image + ')' }" class="carousel-image">
 
             <button id="back" @click="current_item -= 1" aria-controls="current-product" aria-label="back"
                 class="left">&lt;</button>

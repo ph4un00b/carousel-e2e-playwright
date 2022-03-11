@@ -7,20 +7,22 @@
     "reload": "windicss --config windi.config.js --dev --output styles.css",
     "dev": "concurrently \"npm run server\" \"npm run reload\"",
     "styles": "windicss --config windi.config.js --output styles.css",
-    "fmt": "deno fmt main.js",
     "debug": "playwright test --project=webkit --debug",
     "vdebug": "playwright test --project=webkit --debug --config=regression.config.js",
     "gen": "playwright codegen --device=\"iPhone 11\" http://localhost:3000/static/",
     "test": "playwright test --project=webkit --reporter=list",
     "tests": "playwright test --reporter=list",
     "update": "playwright test --update-snapshots",
-    "visual": "playwright test --config=regression.config.js"
+    "visual": "playwright test --config=regression.config.js",
+    "perf": "unlighthouse"
   },
   "keywords": [],
   "author": "ph4un00b",
   "devDependencies": {
     "@playwright/test": "1.19.2",
     "concurrently": "7.0.0",
+    "puppeteer": "13.5.1",
+    "unlighthouse": "0.3.6",
     "windicss": "3.5.0"
   }
 }

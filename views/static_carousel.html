@@ -5,7 +5,7 @@
     { name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../images/human.jpg" }
 ] %}
 
-<section v-cloak v-scope="CarouselController()" @vue:mounted="total_items = {{ products.length }}"
+<section v-scope="CarouselController()" @vue:mounted="total_items = {{ products.length }}"
     aria-label="products on demand" id="carousel" class="bg-carousel">
 
     {% for product in products %}
