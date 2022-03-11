@@ -1,0 +1,14 @@
+{
+  "bg-carousel": "bg-[#3c586c]",
+  "carousel-image": "bg-cover flex flex-row items-center justify-between bg-purple-400 sm:bg-rose-400 lg:bg-orange-400",
+  "left": "z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer",
+  "square": "relative bg-rose-200",
+  "right": "z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer",
+  "content": "text-white sm:flex sm:flex-col sm:justify-center",
+  "grid-content": "grid grid-cols-3 space-y-[1.2em] mb-[1em] mx-[1em] sm:space-y-[0.6em] sm:mb-[0em] sm:mx-[0em] sm:grid-col-4 sm:bg-transparent-400 sm:h-[65%] lg:h-[50%] lg:grid-cols-5",
+  "secondary-title": "text-center hidden sm:block sm:col-span-4 lg:font-bold lg:text-sm",
+  "item-name": "col-span-3 text-center text-2xl sm:col-span-4 lg:text-3xl",
+  "item-description": "col-span-3 text-center tracking-wide break-words sm:pb-[0.5em] sm:col-span-4 lg:text-xl",
+  "call-to-action": "col-span-3 py-4 bg-[#58a4e0] text-white cursor-pointer sm:col-span-4 lg:py-2",
+  "alternative-link": "col-span-3 text-[#58a4e0] text-center pt-4 pb-[1em] underline decoration-gray-900/40 decoration-1 underline-offset-6 sm:col-span-4"
+}

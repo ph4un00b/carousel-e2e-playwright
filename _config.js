@@ -13,6 +13,7 @@ const site = lume({}, { nunjucks });
 site.copy("main.js");
 site.copy("styles.css");
 site.copy("static/controllers")
+site.copy("static/assets")
 site.copy("dynamic/controllers")
 site.copy("dynamic/assets")
 site.copy("images")

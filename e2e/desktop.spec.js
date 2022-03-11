@@ -7,21 +7,25 @@ test.use({
 
 test.describe("Desktop Carousel", () => {
   test("markup should be visible.", async ({ page }) => {
-    await page.goto("http://localhost:3000/");
+    await page.goto("http://localhost:3000/", {
+      waitUntil: "networkidle",
+    });
     await expect(page.locator("#carousel")).toBeVisible();
     await expect(page.locator("text=<")).toBeVisible();
     await expect(page.locator(".carousel-image")).toBeVisible();
     await expect(page.locator("text=>")).toBeVisible();
     await expect(page.locator("text=Featured Boxes")).toBeVisible();
-    await expect(page.locator(".carousel-title")).toBeVisible();
-    await expect(page.locator(".carousel-description")).toBeVisible();
+    await expect(page.locator(".item-name")).toBeVisible();
+    await expect(page.locator(".item-description")).toBeVisible();
     await expect(page.locator("text=Learn how it works")).toBeVisible();
     await expect(page.locator("text=or View available boxes")).toBeVisible();
   });
 
   test("static controls", async ({ page }) => {
     // Go to http://localhost:3000/static/
-    await page.goto("http://localhost:3000/static/");
+    await page.goto("http://localhost:3000/static/", {
+      waitUntil: "networkidle",
+    });
     // Click text=Alchemy
     await expect(page.locator("text=Alchemy")).toBeVisible();
     // Click text=Stock your home bar with pro-level cocktail wares.
@@ -91,7 +95,9 @@ test.describe("Desktop Carousel", () => {
 
   test("dynamic controls", async ({ page }) => {
     // Go to http://localhost:3000/static/
-    await page.goto("http://localhost:3000/dynamic/");
+    await page.goto("http://localhost:3000/dynamic/", {
+      waitUntil: "networkidle",
+    });
     // Click text=Alchemy
     await expect(page.locator("text=Alchemy")).toBeVisible();
     // Click text=Stock your home bar with pro-level cocktail wares.

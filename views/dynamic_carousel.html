@@ -1,19 +1,19 @@
-<section v-cloak v-scope="CarouselController()" aria-label="products on demand" id="carousel" class="bg-[#3c586c]">
+<section v-cloak v-scope="CarouselController()" aria-label="products on demand" id="carousel" class="bg-carousel">
 
     <section :aria-label="'product: ' + current_product.name" class="controls">
 
         <div :style="{ 'background-image': 'url(' + current_product.image + ')' }"
-            class="carousel-image bg-cover flex flex-row items-center justify-between bg-purple-400 sm:bg-rose-400 lg:bg-orange-400">
+            class="carousel-image">
 
             <button id="back" @click="current_item -= 1" aria-controls="current-product" aria-label="back"
-                class="left z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer">&lt;</button>
+                class="left">&lt;</button>
 
-            <div class="relative aspect-w-1 aspect-h-1 bg-rose-200">
+            <div class="square aspect-w-1 aspect-h-1">
 
             </div>
 
             <button id="next" @click="current_item += 1" aria-controls="current-product" aria-label="next"
-                class="right z-1 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer">&gt;</button>
+                class="right">&gt;</button>
 
         </div>
 
@@ -21,31 +21,31 @@
 
 
     <section id="current-product" aria-label="product description"
-        class="content text-white sm:flex sm:flex-col sm:justify-center">
+        class="content">
 
         <section aria-labelledby="product-name"
-            class="grid grid-cols-3 space-y-[1.2em] mb-[1em] mx-[1em] sm:space-y-[0.6em] sm:mb-[0em] sm:mx-[0em] sm:grid-col-4 sm:bg-transparent-400 sm:h-[65%] lg:h-[50%] lg:grid-cols-5">
+            class="grid-content">
 
-            <p class="text-center hidden sm:block sm:col-span-4 lg:font-bold lg:text-sm">
+            <p class="secondary-title">
                 Featured Boxes
             </p>
 
-            <h1 id="product-name" class="col-span-3 text-center carousel-title text-2xl sm:col-span-4 lg:text-3xl">
+            <h1 id="product-name" class="item-name">
                 ${ current_product.name }
             </h1>
 
             <p
-                class="col-span-3 text-center tracking-wide break-words sm:pb-[0.5em] sm:col-span-4 lg:text-xl carousel-description">
+                class="item-description">
                 ${ current_product.description }
             </p>
 
-            <button class="col-span-3 py-4 bg-[#58a4e0] text-white sm:col-span-4 lg:py-2 cursor-pointer">
+            <button class="call-to-action">
                 Learn how it works
             </button>
 
 
             <a href="#"
-                class="col-span-3 text-[#58a4e0] text-center pt-4 pb-[1em] underline decoration-gray-900/40 decoration-1 underline-offset-6 sm:col-span-4">
+                class="alternative-link">
                 or View available boxes
             </a>
 

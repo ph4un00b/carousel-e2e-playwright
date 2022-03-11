@@ -4,15 +4,15 @@
   "description": "",
   "scripts": {
     "server": "lume --serve",
-    "reload": "windicss --dev --output styles.css index.html views/**",
+    "reload": "windicss --config windi.config.js --dev --output styles.css",
     "dev": "concurrently \"npm run server\" \"npm run reload\"",
-    "styles": "windicss --output styles.css index.html views/**",
+    "styles": "windicss --config windi.config.js --output styles.css",
     "fmt": "deno fmt main.js",
     "debug": "playwright test --project=webkit --debug",
     "vdebug": "playwright test --project=webkit --debug --config=regression.config.js",
     "gen": "playwright codegen --device=\"iPhone 11\" http://localhost:3000/static/",
     "test": "playwright test --project=webkit --reporter=list",
-    "tests": "playwright test --reporter=list --workers 1",
+    "tests": "playwright test --reporter=list",
     "update": "playwright test --update-snapshots",
     "visual": "playwright test --config=regression.config.js"
   },

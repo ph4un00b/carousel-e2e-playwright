@@ -26,7 +26,7 @@ const config = {
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 3 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -46,23 +46,14 @@ const config = {
   projects: [
     {
       name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-      },
     },
 
     {
       name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
     },
 
      {
        name: 'webkit',
-       use: {
-         ...devices['Desktop Safari'],
-       },
      },
 
     /* Test against mobile viewports. */
@@ -98,10 +89,10 @@ const config = {
   // outputDir: 'test-results/',
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
+  webServer: {
+    command: 'npm run dev',
+    port: 3000,
+  },
 };
 
 module.exports = config;
