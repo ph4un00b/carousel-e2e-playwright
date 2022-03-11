@@ -27,12 +27,12 @@
                 Featured Boxes
             </p>
 
-            <h1 id="product-name" class="item-name">
-                ${ current_product.name }
+            <h1 id="product-name" class="item-name" v-effect="$el.textContent = current_product.name">
+                loading...
             </h1>
 
-            <p class="item-description">
-                ${ current_product.description }
+            <p class="item-description" v-effect="$el.textContent = current_product.description">
+                loading...
             </p>
 
             <button class="call-to-action">
