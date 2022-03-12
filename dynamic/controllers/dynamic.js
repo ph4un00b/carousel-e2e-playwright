@@ -1,22 +1,29 @@
 // import products from "../assets/models.json" assert { type: "json" };
 // import { createApp } from "https://unpkg.com/petite-vue?module";
-import { createApp } from "./petite-vue.es.js";
-const resp = await fetch("./assets/models.json");
-if (!resp.ok) throw new Error("json not loaded");
+import { createApp } from "../../petite-vue.js";
 
-const products = await resp.json();
-function CarouselController() {
-  return {
-    products,
-    total_items: products.length,
-    current_item: 0,
-    get current_product() {
-      return this.products[this.index];
-    },
-    get index() {
-      return Math.abs(this.current_item % this.total_items);
-    },
-  };
-}
+fetch("./assets/models.json")
+  .then((resp) => resp.json())
+  .then((products) => {
+    function CarouselController() {
+      return {
+        products,
+        current_item: 0,
+        total_items: products.length,
+        get current_product() {
+          return this.products[this.index];
+        },
+        get webp() {
+          return Modernizr?.webp
+        },
+        get index() {
+          return Math.abs(this.current_item % this.total_items);
+        },
+      };
+    }
 
-createApp({ CarouselController, $delimiters: ["${", "}"] }).mount("#carousel");
+    createApp({ CarouselController, $delimiters: ["${", "}"] }).mount(
+      "#carousel",
+    );
+  })
+  .catch(console.error);

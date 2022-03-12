@@ -6,10 +6,29 @@ test.use({
 });
 
 test.describe("Tablet Carousel", () => {
-  test("markup should be visible.", async ({ page }) => {
-    await page.goto("http://localhost:3000/", {
+  test("static markup should be visible.", async ({ page }) => {
+    await page.goto("http://localhost:3000/static/", {
       waitUntil: "networkidle",
     });
+
+    await expect(page.locator("html")).toHaveClass(/webp/);
+    await expect(page.locator("#carousel")).toBeVisible();
+    await expect(page.locator("text=<")).toBeVisible();
+    await expect(page.locator(".carousel-image")).toBeVisible();
+    await expect(page.locator("text=>")).toBeVisible();
+    await expect(page.locator("text=Featured Boxes")).toBeVisible();
+    await expect(page.locator(".item-name")).toBeVisible();
+    await expect(page.locator(".item-description")).toBeVisible();
+    await expect(page.locator("text=Learn how it works")).toBeVisible();
+    await expect(page.locator("text=or View available boxes")).toBeVisible();
+  });
+
+  test("dynamic markup should be visible.", async ({ page }) => {
+    await page.goto("http://localhost:3000/dynamic/", {
+      waitUntil: "networkidle",
+    });
+
+    await expect(page.locator("html")).toHaveClass(/webp/);
     await expect(page.locator("#carousel")).toBeVisible();
     await expect(page.locator("text=<")).toBeVisible();
     await expect(page.locator(".carousel-image")).toBeVisible();

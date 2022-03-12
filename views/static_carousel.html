@@ -1,8 +1,8 @@
 {% set products = [
-    { name: "Alchemy", description: "Stock your home bar with pro-level cocktail wares.", image: "../img/human.webp" },
-    { name: "Aged", description: "A toast to the perfectly aged cocktail.", image: "../img/human.webp" },
-    { name: "Refresh", description: "Bring some class to your morning routine.", image: "../img/human.webp" },
-    { name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../img/human.webp" }
+{ name: "Alchemy", description: "Stock your home bar with pro-level cocktail wares.", image: "../img/human" },
+{ name: "Aged", description: "A toast to the perfectly aged cocktail.", image: "../img/human" },
+{ name: "Refresh", description: "Bring some class to your morning routine.", image: "../img/human" },
+{ name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../img/human" }
 ] %}
 
 <section v-scope="CarouselController()" @vue:mounted="total_items = {{ products.length }}"
@@ -10,10 +10,12 @@
 
     {% for product in products %}
 
-    <div v-if="current_index === {{ loop.index0 }}" v-effect="$el.classList.remove('hidden')" class="carousel-item {{ '' if loop.index0 == 0 else 'hidden' }}">
+    <div v-if="current_index === {{ loop.index0 }}" v-effect="$el.classList.remove('hidden')"
+        class="carousel-item {{ '' if loop.index0 == 0 else 'hidden' }}">
         <section aria-label="product: {{ product.name }}" class="controls">
 
-            <div style="background-image: url('{{ product.image }}');" class="carousel-image">
+            <div :style="{ 'background-image': 'url(' + (webp ? '{{ product.image }}.webp' : '{{ product.image }}.jpg') + ')' }"
+                style="background-image: url('{{ product.image }}.webp');" class="carousel-image">
 
                 <button id="back-{{ loop.index0 }}" @click="current_item -= 1" aria-controls="current-product"
                     aria-label="back" class="left">&lt;</button>

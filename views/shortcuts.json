@@ -1,9 +1,9 @@
 {
   "bg-carousel": "bg-[#3c586c]",
   "carousel-image": "-z-1 bg-cover flex flex-row items-center justify-between",
-  "left": "z-10 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer",
+  "left": "z-10 bg-cool-gray-300 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer",
   "square": "relative bg-black",
-  "right": "z-10 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer",
+  "right": "z-10 bg-cool-gray-300 relative text-cool-gray-400 border-cool-gray-300 cursor-pointer",
   "content": "text-white sm:flex sm:flex-col sm:justify-center",
   "grid-content": "grid grid-cols-3 space-y-[1.2em] mb-[1em] mx-[1em] sm:space-y-[0.6em] sm:mb-[0em] sm:mx-[0em] sm:grid-col-4 sm:bg-transparent-400 sm:h-[65%] lg:h-[50%] lg:grid-cols-5",
   "secondary-title": "text-center hidden sm:block sm:col-span-4 lg:font-bold lg:text-sm",

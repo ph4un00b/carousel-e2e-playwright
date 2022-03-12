@@ -2,7 +2,6 @@ import lume from "lume/mod.ts";
 import imagick from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/imagick/imagick.ts";
 import postcss from "lume/plugins/postcss.ts";
 import parcelcss, { version } from "lume/plugins/parcel_css.ts";
-import inline from "lume/plugins/inline.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 
 const nunjucks = {
@@ -16,16 +15,15 @@ const nunjucks = {
 const site = lume({}, { nunjucks });
 
 site
-  .ignore("playwright-report")
+  .ignore("e2e")
   .ignore("regression")
   .ignore("node_modules")
-  .ignore("e2e")
-  .ignore("unlighthouse.config.js")
+  .ignore("windi.config.js")
+  .ignore("playwright-report")
   .ignore("playwright.config.js")
   .ignore("regression.config.js")
-  .ignore("windi.config.js")
+  .ignore("unlighthouse.config.js")
   .use(imagick())
-  // .use(inline())
   .use(postcss())
   
   site.use(esbuild({
@@ -33,6 +31,7 @@ site
   }));
 
 site.copy("dynamic/assets/models.json");
+// site.copy("dynamic/controllers/dynamic.js");
 
 site.use(parcelcss({
   extensions: [".css"],

@@ -24,6 +24,8 @@
   z-index: -1;
 }
 .left {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
   --tw-border-opacity: 1;
   border-color: rgba(209, 213, 219, var(--tw-border-opacity));
   cursor: pointer;
@@ -38,6 +40,8 @@
   position: relative;
 }
 .right {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
   --tw-border-opacity: 1;
   border-color: rgba(209, 213, 219, var(--tw-border-opacity));
   cursor: pointer;

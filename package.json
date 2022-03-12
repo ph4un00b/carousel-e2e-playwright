@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "server": "lume --serve",
-    "reload": "windicss --config windi.config.js --dev --output styles.css",
+    "reload": "windicss --config windi.config.js --dev --output _includes/styles.css",
     "dev": "concurrently \"npm run server\" \"npm run reload\"",
-    "styles": "windicss --config windi.config.js --output styles.css",
+    "styles": "windicss --config windi.config.js --output _includes/styles.css",
     "debug": "playwright test --project=webkit --debug",
     "vdebug": "playwright test --project=webkit --debug --config=regression.config.js",
     "gen": "playwright codegen --device=\"iPhone 11\" http://localhost:3000/static/",
