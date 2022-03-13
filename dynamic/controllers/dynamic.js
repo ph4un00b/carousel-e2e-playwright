@@ -14,7 +14,11 @@ fetch("./assets/models.json")
           return this.products[this.index];
         },
         get webp() {
-          return Modernizr?.webp
+          return Modernizr?.webp;
+        },
+        get url_image() {
+          const product = this.current_product;
+          return `url(${(this.webp ? product.image_webp : product.image_jpg)})`;
         },
         get index() {
           return Math.abs(this.current_item % this.total_items);

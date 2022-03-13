@@ -14,18 +14,18 @@
         class="carousel-item {{ '' if loop.index0 == 0 else 'hidden' }}">
         <section aria-label="product: {{ product.name }}" class="controls">
 
-            <div :style="{ 'background-image': 'url(' + (webp ? '{{ product.image }}.webp' : '{{ product.image }}.jpg') + ')' }"
+            <div :style="{ 'background-image': url_image('{{ product.image }}') }"
                 style="background-image: url('{{ product.image }}.webp');" class="carousel-image">
 
-                <button id="back-{{ loop.index0 }}" @click="current_item -= 1" aria-controls="current-product"
-                    aria-label="back" class="left">&lt;</button>
+                <button @click="current_item -= 1" aria-controls="current-product" aria-label="back"
+                    class="left">&lt;</button>
 
                 <div class="square aspect-w-1 aspect-h-1">
 
                 </div>
 
-                <button id="next-{{ loop.index0 }}" @click="current_item += 1" aria-controls="current-product"
-                    aria-label="next" class="right">&gt;</button>
+                <button @click="current_item += 1" aria-controls="current-product" aria-label="next"
+                    class="right">&gt;</button>
 
             </div>
 

@@ -9,7 +9,11 @@ function CarouselController() {
       return Math.abs(this.current_item % this.total_items);
     },
     get webp() {
-      return Modernizr?.webp
+      return Modernizr?.webp;
+    },
+    url_image(filename) {
+      const url_image = this.webp ? `${filename}.webp` : `${filename}.jpg`;
+      return `url(${url_image})`;
     },
   };
 }
