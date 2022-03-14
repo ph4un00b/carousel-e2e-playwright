@@ -7,7 +7,7 @@ test.use({
 
 test.describe("Desktop Carousel", () => {
   test("static look and feel.", async ({ page }) => {
-    await page.goto("http://localhost:3000/static/", {
+    await page.goto("/modules/static/", {
       waitUntil: "networkidle",
     });
 
@@ -18,7 +18,7 @@ test.describe("Desktop Carousel", () => {
   });
 
   test("dynamic look and feel.", async ({ page }) => {
-    await page.goto("http://localhost:3000/dynamic/", {
+    await page.goto("/modules/dynamic/", {
       waitUntil: "networkidle",
     });
 

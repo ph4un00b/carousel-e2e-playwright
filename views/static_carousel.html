@@ -1,8 +1,8 @@
 {% set products = [
-{ name: "Alchemy", description: "Stock your home bar with pro-level cocktail wares.", image: "../img/human" },
-{ name: "Aged", description: "A toast to the perfectly aged cocktail.", image: "../img/human2" },
-{ name: "Refresh", description: "Bring some class to your morning routine.", image: "../img/human3" },
-{ name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../img/human4" }
+{ name: "Alchemy", description: "Stock your home bar with pro-level cocktail wares.", image: "../../img/human" },
+{ name: "Aged", description: "A toast to the perfectly aged cocktail.", image: "../../img/human2" },
+{ name: "Refresh", description: "Bring some class to your morning routine.", image: "../../img/human3" },
+{ name: "Weekender", description: "Don't just get away from the crowds — stand out from them.", image: "../../img/human4" }
 ] %}
 
 <section v-scope="CarouselController()" @vue:mounted="total_items = {{ products.length }}"

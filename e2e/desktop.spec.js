@@ -12,7 +12,7 @@ test.use({
 
 test.describe("Desktop Carousel", () => {
   test("static markup should be visible.", async ({ page }) => {
-    await page.goto("http://localhost:3000/static/", {
+    await page.goto("/modules/static/", {
       waitUntil: "networkidle",
     });
 
@@ -21,7 +21,7 @@ test.describe("Desktop Carousel", () => {
   });
 
   test("dynamic markup should be visible.", async ({ page }) => {
-    await page.goto("http://localhost:3000/dynamic/", {
+    await page.goto("/modules/dynamic/", {
       waitUntil: "networkidle",
     });
 
@@ -30,7 +30,7 @@ test.describe("Desktop Carousel", () => {
   });
 
   test("static controls", async ({ page }) => {
-    await page.goto("http://localhost:3000/static/", {
+    await page.goto("/modules/static/", {
       waitUntil: "networkidle",
     });
 
@@ -38,7 +38,7 @@ test.describe("Desktop Carousel", () => {
   });
 
   test("dynamic controls", async ({ page }) => {
-    await page.goto("http://localhost:3000/dynamic/", {
+    await page.goto("/modules/dynamic/", {
       waitUntil: "networkidle",
     });
 

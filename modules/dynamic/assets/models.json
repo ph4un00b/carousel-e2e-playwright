@@ -2,25 +2,25 @@
     {
         "name": "Alchemy",
         "description": "Stock your home bar with pro-level cocktail wares.",
-        "image_webp": "../img/human.webp",
-        "image_jpg": "../img/human.jpg"
+        "image_webp": "../../img/human.webp",
+        "image_jpg": "../../img/human.jpg"
     },
     {
         "name": "Aged",
         "description": "A toast to the perfectly aged cocktail.",
-        "image_webp": "../img/human2.webp",
-        "image_jpg": "../img/human2.jpg"
+        "image_webp": "../../img/human2.webp",
+        "image_jpg": "../../img/human2.jpg"
     },
     {
         "name": "Refresh",
         "description": "Bring some class to your morning routine.",
-        "image_webp": "../img/human3.webp",
-        "image_jpg": "../img/human3.jpg"
+        "image_webp": "../../img/human3.webp",
+        "image_jpg": "../../img/human3.jpg"
     },
     {
         "name": "Weekender",
         "description": "Don't just get away from the crowds — stand out from them.",
-        "image_webp": "../img/human4.webp",
-        "image_jpg": "../img/human4.jpg"
+        "image_webp": "../../img/human4.webp",
+        "image_jpg": "../../img/human4.jpg"
     }
 ]

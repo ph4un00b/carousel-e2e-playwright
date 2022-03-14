@@ -30,7 +30,7 @@ site.use(esbuild({
   extensions: [".js"],
 }));
 
-site.copy("dynamic/assets/models.json");
+site.copy("modules/dynamic/assets/models.json");
 // site.copy("dynamic/controllers/dynamic.js");
 
 site.use(parcelcss({
