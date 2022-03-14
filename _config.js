@@ -24,11 +24,11 @@ site
   .ignore("regression.config.js")
   .ignore("unlighthouse.config.js")
   .use(imagick())
-  .use(postcss())
-  
-  site.use(esbuild({
-    extensions: [".js"],
-  }));
+  .use(postcss());
+
+site.use(esbuild({
+  extensions: [".js"],
+}));
 
 site.copy("dynamic/assets/models.json");
 // site.copy("dynamic/controllers/dynamic.js");
