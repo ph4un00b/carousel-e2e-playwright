@@ -6,7 +6,7 @@ export default defineConfig({
   },
   // site: "http://localhost:3000",
   site: "https://carousel-opal.vercel.app",
-  urls: ["/static/", "/dynamic/"],
+  urls: ["/modules/static/", "/modules/dynamic/"],
   scanner: {
     // exclude specific routes
     exclude: [
@@ -15,7 +15,7 @@ export default defineConfig({
       "en-*",
     ],
     // run lighthouse for each URL 3 times
-    samples: 1,
+    samples: 3,
     // use desktop to scan
     device: "mobile",
     // enable the throttling mode

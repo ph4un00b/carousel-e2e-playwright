@@ -31,6 +31,7 @@ site.use(esbuild({
 }));
 
 site.copy("modules/dynamic/assets/models.json");
+site.copy("modules/component/assets/models.json");
 // site.copy("dynamic/controllers/dynamic.js");
 
 site.use(parcelcss({

@@ -25,4 +25,14 @@ test.describe("Tablet Carousel", () => {
       "tablet-carousel.png",
     );
   });
+
+  test("component look and feel.", async ({ page }) => {
+    await page.goto("/modules/component/", {
+      waitUntil: "networkidle",
+    });
+
+    expect(await page.screenshot({ omitBackground: true })).toMatchSnapshot(
+      "tablet-carousel.png",
+    );
+  });
 });
